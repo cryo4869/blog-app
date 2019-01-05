@@ -1,0 +1,16 @@
+<div class="text">
+  <%= blog.text %>
+  <ul class="list clearfix">
+    <li>
+      <%= link_to 'SHOW', "/blogs/#{blog.id}", class:"link", method: :get %>
+    </li>
+           <% if user_signed_in? && current_user.id == blog.user_id %>
+    <li>
+      <%= link_to 'EDIT', "/blogs/#{blog.id}/edit", class:"link", method: :get %>
+    </li>
+    <li>
+      <%= link_to 'DESTROY', "/blogs/#{blog.id}/", class:"link", method: :delete %>
+    </li>
+    <% end %>
+  </ul>
+</div>

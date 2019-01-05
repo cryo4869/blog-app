@@ -1,0 +1,7 @@
+<%= form_for(@blog, :url =>{:action => 'update'} ) do |f| %>
+
+  <%= f.label :text, "編集" %><br>
+  <%= f.text_area :text %><br>
+  <%= f.submit  "確定"%>
+
+<% end %>
